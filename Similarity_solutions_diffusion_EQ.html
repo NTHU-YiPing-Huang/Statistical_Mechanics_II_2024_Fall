@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Introduction &#8212; Statistical Mechanics (II)</title>
+    <title>The similarity solutions &#8212; Statistical Mechanics (II)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -217,7 +219,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintroduction.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FSimilarity_solutions_diffusion_EQ.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -245,7 +247,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/introduction.md"
+        <a href="_sources/Similarity_solutions_diffusion_EQ.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -282,23 +284,60 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-diffusion-equation">
+   The diffusion equation
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction</h1>
+                <h1>The similarity solutions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-diffusion-equation">
+   The diffusion equation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -306,51 +345,23 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
-<ul class="simple">
-<li><p>Introduction</p></li>
-<li><p>1D Ising model revisit</p>
-<ul>
-<li><p>The transfer matrix method</p></li>
-<li><p>The classical quantum correspondence</p></li>
-</ul>
-</li>
-<li><p>2D Ising model</p>
-<ul>
-<li><p>The mean field theory</p></li>
-<li><p>The low-temperature series expansion</p></li>
-<li><p>The high-temperature series expansion</p></li>
-<li><p>Duality</p></li>
-<li><p>Exact solution of two-dimensional Ising model</p></li>
-</ul>
-</li>
-<li><p>Critical phenomena and renormalization group</p>
-<ul>
-<li><p>Scaling law</p></li>
-<li><p>Anomalous dimension</p></li>
-<li><p>Real space renormalization</p>
-<ul>
-<li><p>Uniform system</p></li>
-<li><p>Disorder system</p></li>
-</ul>
-</li>
-<li><p>Momentum space renormalization</p>
-<ul>
-<li><p>Fermi liquid theory</p></li>
-<li><p>Wilson-Fisher fix point</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>XY model and KT transition</p></li>
-<li><p>Mott-Superfuild transition</p>
-<ul>
-<li><p>vortex duality</p></li>
-</ul>
-</li>
-<li><p>Fermi liquid theory</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-similarity-solutions">
+<h1>The similarity solutions<a class="headerlink" href="#the-similarity-solutions" title="Permalink to this headline">#</a></h1>
+<p>We want to show that the similarity solutions is closely related to the <em>intermediate asymptotic solution of the first kind</em>.</p>
+<section id="the-diffusion-equation">
+<h2>The diffusion equation<a class="headerlink" href="#the-diffusion-equation" title="Permalink to this headline">#</a></h2>
+<p>Consider the one-dimensional diffusion equation:</p>
+<div class="math notranslate nohighlight">
+\[
+ \partial_t u(x,t)=\frac{\kappa}{2} \partial_x^2 u(x,t)
+\]</div>
+<p>with initial condition</p>
+<div class="math notranslate nohighlight">
+\[
+u(x,t=0)=\frac{A_0}{\sqrt{2\pi l^2}} e^{-\frac{x^2}{2l^2}}\text{.}
+\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(A_0\)</span> is the mass which represent the area below <span class="math notranslate nohighlight">\(u(x,t)\)</span>. The mass is a conserved quantity during the evolution governed by the diffusion equation. We need to specify</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
